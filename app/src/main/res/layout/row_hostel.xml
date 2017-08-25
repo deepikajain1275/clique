@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.clique.utils.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tv_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:padding="@dimen/dp_20"
+    android:text="dsad"
+    android:maxLines="1"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit ="marquee_forever"
+    android:scrollHorizontally="true"
+    android:textColor="@android:color/black"
+    android:textSize="@dimen/sp_18"
+    app:fonttype="@string/regular" />

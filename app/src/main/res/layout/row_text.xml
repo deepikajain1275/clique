@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_brand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="centerInside"
+        app:failureImage="@drawable/ic_placeholde"
+        app:failureImageScaleType="centerInside"
+        app:placeholderImage="@drawable/ic_placeholde"
+        app:placeholderImageScaleType="centerInside"
+        app:retryImage="@drawable/ic_placeholde"
+        app:retryImageScaleType="centerCrop" />
+</FrameLayout>

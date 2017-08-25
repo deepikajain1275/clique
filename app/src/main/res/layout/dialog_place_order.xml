@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_corner_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:src="@drawable/ic_cross"
+                android:visibility="invisible" />
+
+
+            <com.clique.utils.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Place An Order"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_16"
+                android:visibility="visible"
+                app:fonttype="@string/semibold" />
+
+            <ImageView
+                android:id="@+id/ic_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:src="@drawable/ic_cross" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="#649e9e9e" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:buttonTint="@color/colorblue"
+                android:layout_margin="@dimen/dp_10" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dp_60"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/ic_placeholde"
+                app:placeholderImageScaleType="fitCenter" />
+            <com.clique.utils.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:text="@string/rupee"
+                android:textColor="#A0A0A0"
+                android:textSize="@dimen/sp_16"
+                android:visibility="visible"
+                app:fonttype="@string/semibold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:buttonTint="@color/colorblue"
+                android:layout_margin="@dimen/dp_10" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dp_60"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/ic_placeholde"
+                app:placeholderImageScaleType="fitCenter" />
+            <com.clique.utils.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:text="@string/rupee"
+                android:textColor="#A0A0A0"
+                android:textSize="@dimen/sp_16"
+                android:visibility="visible"
+                app:fonttype="@string/semibold" />
+
+        </LinearLayout>
+
+        <com.clique.utils.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="Order total : 650"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_18"
+            android:visibility="visible"
+            app:fonttype="@string/semibold" />
+        <com.clique.utils.CustomTextView
+            android:id="@+id/tv_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/round_corner_bg"
+            android:gravity="center"
+            android:text="Place an Order"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_20"
+            app:fonttype="@string/semibold" />
+    </LinearLayout>
+</LinearLayout>

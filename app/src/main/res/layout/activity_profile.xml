@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/activity_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:gravity="center_horizontal"
+        tools:context="com.clique.activity.ProfileActivity">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_cross" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.clique.utils.CustomTextView
+                android:id="@+id/tv_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/round_corner_gray"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_16"
+                app:fonttype="@string/semibold" />
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_user_placeholder"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/ic_user_placeholder"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/ic_user_placeholder"
+            app:placeholderImageScaleType="centerCrop"
+            app:retryImage="@drawable/ic_user_placeholder"
+            app:retryImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <com.clique.utils.CEditText
+            android:id="@+id/cet_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:inputType="textCapWords"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@android:color/transparent"
+            android:hint="First Name"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="#a49e9e9e"
+            android:textSize="@dimen/sp_20"
+            app:fonttype="@string/semibold">
+
+            <requestFocus />
+        </com.clique.utils.CEditText>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginTop="5dp"
+            android:background="#649e9e9e" />
+        <com.clique.utils.CEditText
+            android:id="@+id/cet_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:inputType="textCapWords"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@android:color/transparent"
+            android:hint="Last Name"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="#a49e9e9e"
+            android:textSize="@dimen/sp_20"
+            app:fonttype="@string/semibold">
+
+        </com.clique.utils.CEditText>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginTop="5dp"
+            android:background="#649e9e9e" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:background="#649e9e9e" />
+
+        <com.clique.utils.CEditText
+            android:id="@+id/cet_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_30"
+            android:drawablePadding="@dimen/dp_10"
+            android:background="@android:color/transparent"
+            android:hint="Hostel Name"
+            android:textColor="@android:color/black"
+            android:textColorHint="#a49e9e9e"
+            android:textSize="@dimen/sp_20"
+            android:editable="false"
+            app:fonttype="@string/semibold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginTop="5dp"
+            android:background="#649e9e9e" />
+
+        <com.clique.utils.CEditText
+            android:id="@+id/cet_phoneno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@android:color/transparent"
+            android:editable="false"
+            android:enabled="false"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center"
+            android:hint="Phone no."
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textColorHint="#a49e9e9e"
+            android:textSize="@dimen/sp_20"
+            app:fonttype="@string/semibold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:layout_marginTop="5dp"
+            android:background="#649e9e9e" />
+    </LinearLayout>
+</ScrollView>

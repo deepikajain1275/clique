@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingTop="@dimen/dp_5"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:src="@drawable/ic_profile"
+            app:actualImageScaleType="focusCrop"
+            app:placeholderImage="@color/colorblue"
+            app:failureImage="@drawable/ic_profile"
+            app:failureImageScaleType="centerInside"
+            app:retryImage="@drawable/ic_profile"
+            app:retryImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <com.clique.utils.CustomTextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@android:color/white"
+            android:text="DJ"
+            android:gravity="center"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/fl_image"
+        android:animateLayoutChanges="true"
+        android:layout_marginRight="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.clique.utils.CustomTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Deepika Jain"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_20"
+            app:fonttype="@string/regular" />
+
+        <com.clique.utils.CustomTextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/savedmoney"
+            android:textColor="#878688"
+            android:textSize="@dimen/sp_13"
+            android:visibility="visible"
+            app:fonttype="@string/bolditalic" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/ic_purple"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.05dip"
+        android:layout_below="@+id/fl_image"
+        android:layout_toRightOf="@+id/fl_image"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="#d09c9c9c" />
+</RelativeLayout>

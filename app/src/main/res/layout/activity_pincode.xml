@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_heavy_flow"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.clique.activity.HeavyFlowActivity">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launch" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <com.clique.utils.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Welcome !"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_25"
+        app:fonttype="@string/semibold" />
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:text="One less thing to \nWorry for you"
+        android:textSize="@dimen/sp_25"
+        app:fonttype="@string/semibold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_pincode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_8"
+        android:background="@drawable/round_corner_bg_digit"
+        android:gravity="center"
+        android:text="Select Address"
+        android:drawableLeft="@drawable/ic_send"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        app:fonttype="@string/semibold" />
+
+   <!-- <com.digits.sdk.android.DigitsAuthButton
+        android:id="@+id/auth_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/round_corner_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_40"
+        android:paddingRight="@dimen/dp_40"
+        android:paddingTop="@dimen/dp_12"
+        android:text="Enter Pincode"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_20" />-->
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/round_corner_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_hi_error" />
+
+    <com.clique.utils.CustomTextView
+        android:layout_below="@+id/iv_image"
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_25"
+        android:gravity="center"
+        android:text="We are together in this journey."
+        android:textColor="#000000"
+        android:textSize="@dimen/sp_20"
+        app:fonttype="@string/semibold" />
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:gravity="center"
+        android:layout_below="@+id/tv_name"
+        android:text="You will be notified soon."
+        android:textColor="#9b9b9b"
+        android:textSize="@dimen/sp_18"
+        app:fonttype="@string/regular" />
+
+
+</LinearLayout>

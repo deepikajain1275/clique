@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Hygiene Health</string>
+    <string name="create">Create</string>
+
+    <string name="bold">OpenSans-Bold.ttf</string>
+    <string name="opensemibold">OpenSans-Semibold.ttf</string>
+    <string name="bolditalic">OpenSans-BoldItalic.ttf</string>
+    <string name="extrabold">OpenSans-ExtraBold.ttf</string>
+    <string name="italic">OpenSans-Italic.ttf</string>
+    <string name="light">OpenSans-Light.ttf</string>
+    <string name="lightitalic">OpenSans-LightItalic.ttf</string>
+    <string name="regular">Lato-Regular.ttf</string>
+    <string name="openregular">OpenSans-Regular.ttf</string>
+    <string name="semibold">lato-medium.ttf</string>
+    <string name="extrabolditalic">OpenSans-ExtraBoldItalic.ttf</string>
+    <string name="semibolditalic">OpenSans-SemiBoldItalic.ttf</string>
+    <string name="saygoodbye">\"Say Good Bye\"</string>
+    <string name="embrasment">Embarrassment</string>
+    <string name="easytofast">\"Easy and Fast\"</string>
+    <string name="atyourfootsteps">At your doorstep</string>
+    <string name="save">\"Save Money\"</string>
+    <string name="whenfriendbuywithyou">When friends buy with you</string>
+    <string name="chosseurbarnd">CHOOSE YOUR BRAND</string>
+    <string name="select_hostal">Select Your Hostel</string>
+    <string name="next">NEXT</string>
+    <string name="pleasewait">Please Wait...</string>
+    <string name="savewithfriend">Save with Friends</string>
+    <string name="invite">Invite</string>
+    <string name="theybuy">They Buy</string>
+    <string name="yousave">You Save</string>
+    <string name="skip">Skip</string>
+    <string name="capture_from_camera">Take photo</string>
+    <string name="choose_from_gallery">Choose image</string>
+    <string name="interntconnect">No internet connection!</string>
+    <string name="support_feedback"><![CDATA[Support & Feedback]]></string>
+    <string name="contact">Contact</string>
+    <string-array name="values">
+        <item>Samaras Girls Hostel</item>
+        <item>Diamond Jubilee Girls Hostel</item>
+        <item>Polytechnic Girls Hostel</item>
+        <item>The Master Crest Girls Hostel</item>
+        <item>Master Crest Girls Hostel</item>
+        <item>Saint Xaviers Ladies Hostel</item>
+        <item>L T Munshaw Girls Hostel</item>
+        <item>Shrushti Cept Girls Hostel</item>
+        <item>Gujarat University Girls Hostel</item>
+        <item>L.D. Engineering Girls Hostel</item>
+        <item>None Of The Above</item>
+    </string-array>
+    <string-array name="num">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <!-- <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>-->
+
+
+    <string name="previous">Go to previous</string>
+    <string name="calendar">Calendar</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="rupee">\u20A8 325</string>
+    <string name="checkstatus">Check Status</string>
+    <string name="tryagain">Try Again</string>
+    <string name="first_last_name"><![CDATA[First & Last Name]]></string>
+    <string name="savedmoney">Saved you \u20B9 2.25</string>
+</resources>

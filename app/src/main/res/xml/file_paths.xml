@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="my_images"
+        path="/" />
+    <cache-path
+        name="cache_image"
+        path="/" />
+    <external-files-path
+        name="externalpath"
+        path="/" />
+    <external-path
+        name="my_images"
+        path="Android/data/com.clique/files/Pictures" />
+</paths>

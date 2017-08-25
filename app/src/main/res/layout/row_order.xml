@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_orderid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="Order Id: 1230939494"
+        android:textColor="#A0A0A0"
+        android:textSize="@dimen/sp_16"
+        android:visibility="visible"
+        app:fonttype="@string/semibold" />
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Placed : April 13, 2017"
+        android:textColor="#A0A0A0"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible"
+        app:fonttype="@string/semibold" />
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:text="Order total : 325"
+        android:textColor="#A0A0A0"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible"
+        app:fonttype="@string/semibold" />
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="@dimen/dp_15"
+         android:layout_marginLeft="@dimen/dp_15"
+         android:layout_marginRight="@dimen/dp_15"
+         android:layout_marginTop="@dimen/dp_15"
+         android:orientation="horizontal">
+
+         <com.facebook.drawee.view.SimpleDraweeView
+             android:layout_width="0dp"
+             android:layout_height="@dimen/dp_60"
+             android:layout_marginRight="@dimen/dp_10"
+             android:layout_weight="1"
+             app:actualImageScaleType="fitCenter"
+             app:placeholderImage="@drawable/ic_wisper"
+             app:placeholderImageScaleType="fitCenter" />
+
+         <com.facebook.drawee.view.SimpleDraweeView
+             android:layout_width="0dp"
+             android:layout_height="@dimen/dp_60"
+             android:layout_marginLeft="@dimen/dp_10"
+             android:layout_weight="1"
+             app:actualImageScaleType="fitCenter"
+             app:placeholderImage="@drawable/ic_wisper"
+             app:placeholderImageScaleType="fitCenter" />
+     </LinearLayout>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_order"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_height="@dimen/dp_80"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="5dp"
+        android:background="#649e9e9e" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_tut1" />
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:gravity="center"
+        android:text="@string/saygoodbye"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/sp_25"
+        android:textStyle="bold"
+        app:fonttype="@string/regular" />
+
+    <com.clique.utils.CustomTextView
+        android:id="@+id/tv_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:gravity="center"
+        android:text="@string/embrasment"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp_22"
+        app:fonttype="@string/semibold" />
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />-->
+</LinearLayout>

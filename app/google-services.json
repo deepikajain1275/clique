@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "460448527659",
+    "firebase_url": "https://clique-90964.firebaseio.com",
+    "project_id": "clique-90964",
+    "storage_bucket": "clique-90964.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460448527659:android:50a5599ea3ddbdc7",
+        "android_client_info": {
+          "package_name": "com.clique"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460448527659-0jr4ua4pjd7b38amgr08j9eung5g0q80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clique",
+            "certificate_hash": "56ffee2f07734b483d4efde024d1542ad717bd4a"
+          }
+        },
+        {
+          "client_id": "460448527659-1d6crprsbhtholedrfcc43ik1ueo1sff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOoZBNoyIpHBPAxf4xIu5iavnCdCXOnrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460448527659-1d6crprsbhtholedrfcc43ik1ueo1sff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
