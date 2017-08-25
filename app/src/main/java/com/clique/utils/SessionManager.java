@@ -72,8 +72,11 @@ public class SessionManager {
     public FinalProduct getArrayLisOrder(Context context)
     {
         SharedPreferences prf = context.getSharedPreferences(PREF_SELECT_DATA, Context.MODE_PRIVATE);
-        String oderlist=prf.getString(Constant.ORDER,"");
-       return (FinalProduct) parseFromString(oderlist,FinalProduct.class);
+        if(prf.contains(Constant.ORDER)) {
+            String oderlist = prf.getString(Constant.ORDER, "");
+            return (FinalProduct) parseFromString(oderlist, FinalProduct.class);
+        }else
+            return null;
     }
 
     public void putData(String image, String name, String id, String price, String size) {

@@ -84,7 +84,7 @@ public class OrderActivity extends AppCompatActivity implements MaterialIntroLis
         sessionManager = new SessionManager(this);
         mViewPager = (ViewPager) findViewById(R.id.viewpager_brand);
         llDiscount = (LinearLayout) findViewById(R.id.ll_discount);
-        setupViewPager(mViewPager,getSupportFragmentManager());
+        setupViewPager(mViewPager, getSupportFragmentManager());
 
         ivbuy = (ImageView) findViewById(R.id.iv_buy);
         tvModifiy = (CustomTextView) findViewById(R.id.tv_modifiy);
@@ -146,20 +146,21 @@ public class OrderActivity extends AppCompatActivity implements MaterialIntroLis
                 ivProfile.setImageURI(data.profilePic);
             }
             if (data.isGetSigupDisount == 0) {
-                ivUser.setImageResource(R.drawable.ic_two_women_on_line_2);
                 showIntro(llDiscount, DISCOUNT, "Sign Up Discount", FocusGravity.CENTER, R.drawable.ic_discount, Focus.ALL, ShapeType.RECTANGLE, 1000);
             } else {
                 if (data.isGetInviteFriendDisount == 0)
                     showIntro(ivUser, userid, "Invite Friends to Save", FocusGravity.CENTER, R.drawable.ic_rupee_tut, Focus.ALL, ShapeType.CIRCLE, 1000);
                 else
                     showIntro(llDiscount, "friend", "Friends Discount", FocusGravity.CENTER, R.drawable.ic_rupee_tut, Focus.ALL, ShapeType.RECTANGLE, 1000);
+            }
+            if (data.isGetInviteFriendDisount == 0) {
                 ivUser.setImageResource(R.drawable.ic_two_women_on_line);
+            } else {
+                ivUser.setImageResource(R.drawable.ic_two_women_on_line_2);
             }
         } else {
             showIntro(llDiscount, DISCOUNT, "Sign Up Discount", FocusGravity.CENTER, R.drawable.ic_rupee_tut, Focus.ALL, ShapeType.RECTANGLE, 1000);
         }
-
-
     }
 
     public void showIntro(View view, String id, String text, FocusGravity focusGravity, int imageid, Focus focus, ShapeType shape, int delay) {
@@ -292,7 +293,7 @@ public class OrderActivity extends AppCompatActivity implements MaterialIntroLis
     }
 
 
-    private void setupViewPager(ViewPager viewPager,FragmentManager fm) {
+    private void setupViewPager(ViewPager viewPager, FragmentManager fm) {
         FinalProduct finalProduct = sessionManager.getArrayLisOrder(OrderActivity.this);
         ArrayList<Product> alProduct = finalProduct.alFinalProduct;
         width = (int) (((Activity) viewPager.getContext()).getWindowManager().getDefaultDisplay().getWidth() / 8 * 5.4);
@@ -368,13 +369,12 @@ public class OrderActivity extends AppCompatActivity implements MaterialIntroLis
     }
 
 
-
     public void showOrderAlerDailog() {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(OrderActivity.this);
         LayoutInflater inflater = getLayoutInflater();
         final View dialogView = inflater.inflate(R.layout.dialog_current_order, null);
         dialogBuilder.setView(dialogView);
-       // findViews(dialogView);
+        // findViews(dialogView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);

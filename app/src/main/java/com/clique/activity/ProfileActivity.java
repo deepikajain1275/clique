@@ -20,7 +20,6 @@ import android.widget.Toast;
 import com.clique.R;
 import com.clique.adapter.DialogAdapter;
 import com.clique.modle.Data;
-import com.clique.modle.Pincode;
 import com.clique.modle.ProfileData;
 import com.clique.utils.CEditText;
 import com.clique.utils.Constant;
@@ -157,23 +156,43 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private void callwebService() {
         if (InternetConnection.onCheckInternet(ProfileActivity.this)) {
             progressDialog.show();
+            MultipartBody.Part body = null;
             ApiInterface apiService =
                     ApiClient.getClient().create(ApiInterface.class);
-            if (profilefle != null)
-                filePart = MultipartBody.Part.createFormData("Profilepic", profilefle.getName(), RequestBody.create(MediaType.parse("image/*"), profilefle));
+            if (profilefle != null) {
+                RequestBody requestFile =
+                        RequestBody.create(
+                                MediaType.parse(getContentResolver().getType(TakeImageFromCameraGallery.getUri(profilefle, ProfileActivity.this))),
+                                profilefle
+                        );
+                body =
+                        MultipartBody.Part.createFormData("Profilepic", profilefle.getName(), requestFile);
+            }
+            RequestBody userid =
+                    RequestBody.create(
+                            okhttp3.MultipartBody.FORM, data.userid + "");
+            RequestBody hostalid =
+                    RequestBody.create(
+                            okhttp3.MultipartBody.FORM, data.hostalid + "");
+            RequestBody phoneno =
+                    RequestBody.create(
+                            okhttp3.MultipartBody.FORM, data.phoneNo + "");
+            RequestBody name =
+                    RequestBody.create(
+                            okhttp3.MultipartBody.FORM, cetname
+                                    .getText().toString() + " " + cetLsatName.getText().toString());
 
-            // fbody = RequestBody.create(MediaType.parse("image/*"), profilefle);
-            Call<ProfileData> call = apiService.updateProfile(data.userid + "", data.hostalid,data.phoneNo,cetname
-                    .getText().toString() + " " + cetLsatName.getText().toString());
-            call.enqueue(new Callback<ProfileData>() {
+            Call<ProfileData> call1 = apiService.updateProflieImage(userid, name, hostalid, phoneno, body);
+            call1.enqueue(new Callback<ProfileData>() {
                 @Override
-                public void onResponse(Call<ProfileData> call, Response<ProfileData> response) {
+                public void onResponse(Call<ProfileData> call,
+                                       Response<ProfileData> response) {
                     progressDialog.dismiss();
                     SessionManager sessionManager = new SessionManager(ProfileActivity.this);
-                    Data data= response.body().data.get(0);
-                    if(data!=null)
-                    sessionManager.putSharedPreferenece(data.Name,data.userid,data.Hostelname,data.phoneno,data.hostalid+"",data.profilePic,
-                            data.isGetSigupDisount,data.isGetInviteFriendDisount,data.isinhostelist);
+                    Data data = response.body().data.get(0);
+                    if (data != null)
+                        sessionManager.putSharedPreferenece(data.Name, data.userid, data.Hostelname, data.phoneno, data.hostalid + "", data.profilePic,
+                                data.isGetSigupDisount, data.isGetInviteFriendDisount, data.isinhostelist);
                     if (getIntent().getIntExtra(Constant.TYPE, 0) == 1) {
                         Intent i = new Intent(ProfileActivity.this, OrderPlaceActivity.class);
                         startActivity(i);
@@ -198,7 +217,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                     progressDialog.dismiss();
                     Toast.makeText(ProfileActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
-
             });
         } else {
             nowifiDialog1 = new nowifiDialog(ProfileActivity.this, new nowifiDialog.MyClickListner() {
